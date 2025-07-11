@@ -1,7 +1,4 @@
-// singleton
-// Object.create
-
-// object litreals
+//*************** object litreals ************************
 
 const mysyb = Symbol(mykey1);
 
