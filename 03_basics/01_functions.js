@@ -35,4 +35,39 @@ function loginUserMessage (username) {   /// type. to print vsrisble
 return  ` ${username} just logged in `
 }
 
-console.log(loginUserMessage("badalsingh"))
+// console.log(loginUserMessage("badalsingh"))
+
+function calculatecartprice(value1,value2,...num1) {
+ return num1   
+}
+
+// console.log(calculatecartprice(200,400,5004000,4000))
+ 
+// pass object in a function
+
+// const user = {
+//   name : "badalsingh",
+//   price: 1440
+// }
+
+function hanleobject(anyobject) {
+  console.log(`username is ${anyobject.name} and price is ${anyobject.price}` );
+  
+}
+
+hanleobject({       
+name : "badalsingh",
+price : 199
+})
+
+// pass array form a function
+
+const mynewarray =[100,300,400]
+
+function resultsecondvalue(getarray) {
+    return getarray[1]
+}
+
+console.log(resultsecondvalue(mynewarray));
+
+
