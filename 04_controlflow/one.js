@@ -61,3 +61,22 @@ if (UserloggedIn || dabitcard) {
         // console.log("allow to access the courses");
 
 }
+
+// Nullish Coalescing Operator (??): null undefined
+// this oprator are used to handle multiple stetment like 5 is avalable its oky otherwish(??) 10 
+let val1;
+val1 = 5 ?? 10
+val1 = null ?? 10
+val1 = undefined ?? 10 
+val1 = null ?? undefined ?? 10
+// console.log(val1);
+
+
+// Terniary Operator
+//  condition? true : false also like if statement
+
+const iceTeaPrice = 100;
+
+iceTeaPrice >= 80 ? console.log("Tess than 80") : console.log ("more than 80");
+
+ 
