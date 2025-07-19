@@ -5,12 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM | chai pr code </title>
 </head>
-<body>
+<body style="background-color: black; color: antiquewhite;" >
     <div class="parent">
 <div class="day" >Monday</div>
 <div class="day">Tuesday</div>
 <div class="day">Wednesday</div>
 <div class="day">Thursday</div>
     </div>
+    <!-- <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const parent = document.querySelector(".parent");
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[0].innerHTML);
+});
+</script> -->
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const parent = document.querySelector(".parent");
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[0].innerHTML);
+
+    for (let i = 0; i < parent.children.length; i++) {
+        const element = parent.children[i].innerHTML;
+        
+    }
+});
+
+ 
+</script>
 </html>
