@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// Create a new list item and append it to the existing list of languages
+
+    function addLanguage(langname) {
+       const li =  document.createElement("li");
+       li.innerHTML= ` ${langname}`;
+       document.querySelector('.languages').appendChild(li);
+       appendChild (li)
+    langname.style.color = "red";
+}
+addLanguage ("python") 
+addLanguage ("typescript")
+
+//// or 
+/// // Create a new list item and append it to the existing list of languages unother type
+function addoptilanguage(langname) {
+    const li = document.createElement("li");
+li.appendChild(document.createTextNode(langname));
+document.querySelector('.languages').appendChild(li);
+    
+}
+addLanguage("c++");
+addLanguage("c#");
+addLanguage("java"); 
+
+// editing the text of an existing list item
+
+secaondLanguage = document.querySelector('.languages li:nth-child(2)');
+
+const newli = document.createElement("li");
+newli.textContent= "mogo db"; 
+secaondLanguage.replaceWith(newli);
+
+// or 
+
+firstLanguage = document.querySelector('.languages li:first-child');
+const firstli = document.createElement(" li");
+// firstli.outerHTML = "<li>dbms</li>";
+firstli.textContent = "dbms";
+firstLanguage.replaceWith(firstli);
+
+// removing an existing list item
+
+const thirdLanguage = document.querySelector('.languages li:nth-child(3)');
+thirdLanguage.remove();
+
+</script>
+</html>
