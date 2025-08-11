@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> async code </title>
+</head>
+<body>
+    <h1> java script or code </h1>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+
+    <script>
+        const saydate = function(str) { // this function will be called every second
+            console.log("Hello, badalsingh ", Date.now());
+        }
+       const startbutton = function () { // start the timer
+        timer = setInterval(saydate, 1000); 
+       }
+      const stopbutton = function () { // clear the timer
+        clearInterval(timer);
+      }
+
+</script>
+</body>
+</html>
