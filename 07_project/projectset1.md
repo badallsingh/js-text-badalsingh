@@ -9,7 +9,12 @@ file=index.html)
 # Solution code
 
  
+
 ## project 1
+
+
+
+
   ``` javascript
   document.addEventListener('DOMContentLoaded', function () {
   const buttons = document.querySelectorAll('.button');
@@ -35,7 +40,13 @@ file=index.html)
 });
    ```
 
+
+
    ## project 2 
+
+
+
+
    ``` javascript  
    const form = document.querySelector('form');
 
@@ -67,6 +78,8 @@ form.addEventListener('submit', function (e) {
 
 ## project 3 
 
+
+
 ```javascript
 // const clock = document.querySelector('#clock')
 const clock = document.getElementById('clock')
@@ -79,6 +92,9 @@ setInterval(function ( ){
 ```
 
 ## project 4
+
+
+
    ``` javascript
   const randomnumber = parseInt( Math.random()* 100 +1)
 
@@ -172,3 +188,57 @@ function newGame() {
     playGame = true;
   })
 }    ```
+
+
+
+
+## 6 project 
+
+
+
+``` javascript 
+
+function randomcolor() {
+const hex = "0123456789ABCDEF";
+let color = "#";
+for (let i = 0; i < 6; i++) {
+color += hex[Math.floor(Math.random() * 16)];
+}
+return color;
+}
+
+let intervalId;
+
+function startchangerandomcolor() {
+intervalId = setInterval(changebgcolor, 1000);
+}
+
+function changebgcolor() {
+let newColor = randomcolor();
+document.body.style.backgroundColor = newColor;
+
+// Extract RGB values from HEX
+const r = parseInt(newColor.substr(1, 2), 16);
+const g = parseInt(newColor.substr(3, 2), 16);
+const b = parseInt(newColor.substr(5, 2), 16);
+
+// Calculate brightness (perceived luminance)
+const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+
+// If brightness is high → dark text, else light text
+if (brightness > 155) {
+document.querySelector("h1").style.color = "black";
+} else {
+document.querySelector("h1").style.color = "white";
+}
+}
+
+
+function stopchangerandomcolor() {
+clearInterval(intervalId);
+intervalId = null;
+}
+
+document.querySelector("#start").addEventListener("click", startchangerandomcolor);
+document.querySelector("#stop").addEventListener("click", stopchangerandomcolor); 
+```
