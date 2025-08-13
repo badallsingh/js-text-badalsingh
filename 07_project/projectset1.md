@@ -242,3 +242,31 @@ intervalId = null;
 document.querySelector("#start").addEventListener("click", startchangerandomcolor);
 document.querySelector("#stop").addEventListener("click", stopchangerandomcolor); 
 ```
+
+
+
+
+
+## project .5 
+``` javascript
+
+document.addEventListener("keydown", function(e) {
+  // document.getElementById("message").style.display = "none";
+
+  document.getElementById("output").innerHTML = `
+    <table>
+      <tr>
+        <th>Key</th>
+        <th>Key Code</th>
+        <th>Code</th>
+      </tr>
+      <tr>
+        <td>${e.key === " " ? "Space" : e.key}</td>
+        <td>${e.keyCode || e.which}</td>
+        <td>${e.code}</td>
+      </tr>
+    </table>
+  `;
+});
+
+```
