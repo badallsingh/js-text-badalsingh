@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api learning</title>
+</head>
+<body style="background-color: 0#212121;">
+0
+UNSENT Client has been created. open() not called
+yet.
+1
+OPENED
+OPENED open) has been called.
+2
+HEADERS_RECEIVED
+send() has been called, and headers
+and status are available.
+3
+LOADING Downloading; responseText holds partial data.
+4
+DONE
+The operation is complete.
+</body>
+<script>
+
+const request = 'https://github.com/badallsingh'
+ const xhr = new XMLHttpRequest(); // Create a new XMLHttpRequest object
+
+ xhr.open('GET', request ); // Initialize the request
+ xhr.onreadystatechange = function() { // Define a callback function
+         console.log(xhr.readyState);// Log the current state of the request
+            if (xhr.readyState === 4) { // Check if the request is complete
+            const data = JSON.parse(xhr.responseText); // Parse the response text as JSON
+            console.log(data);// Log the parsed data
+            console.log(data.followers);// Log the number of followers
+            
+            
+                
+    };
+ xhr.send(); // Send the request
+}
+    </script>
+</html>
